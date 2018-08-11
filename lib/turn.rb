@@ -1,4 +1,11 @@
-
+#displays the latest board
+def display_board(board)
+  puts " #{board[0]} | #{board[1]} | #{board[2]} "
+  puts "-----------"
+  puts " #{board[3]} | #{board[4]} | #{board[5]} "
+  puts "-----------"
+  puts " #{board[6]} | #{board[7]} | #{board[8]} "
+end
 
 #Takes users move and converts it to an index on the board
 def input_to_index(input)
@@ -8,16 +15,6 @@ end
 #Updates board with users move
 def move(board,input,char="X")
   board[input] = char
-  board
-end
-
-#displays the latest board
-def display_board(board)
-  puts " #{board[0]} | #{board[1]} | #{board[2]} "
-  puts "-----------"
-  puts " #{board[3]} | #{board[4]} | #{board[5]} "
-  puts "-----------"
-  puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
 #Determines if the users latest move is valid
