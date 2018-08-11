@@ -37,25 +37,14 @@ end
 
 #Lets the player take a turn
 def turn(board)
-#  is_move_valid = false
-#  while is_move_valid == false
-#    puts "Please enter 1-9:"
-#    input = gets.strip
-#    index = input_to_index(input)
-#    is_move_valid = valid_move?(board,index)
-#  end
-#  move(board,index)
-#  display_board(board)
+  puts "Please enter 1-9:"
+  input = gets.strip
+  index = input_to_index(input)
 
-puts "Please enter 1-9:"
-input = gets.strip
-index = input_to_index(input)
-
-if valid_move?(board,index) == true
-  move(board,index)
-  display_board(board)
-else
-  turn(board)
-end
-
+  if valid_move?(board,index) == true
+    move(board,index)
+    display_board(board)
+  else
+    turn(board)
+  end
 end
